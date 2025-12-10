@@ -6,13 +6,7 @@ is currently set to check your node's uptime proof age every five minutes.
 
 ## Session Open Service Node Finder
 
-Open service node finder is currently not functional. It requires an update.
-
-~~I recently built a [node finder script](node_finder.py) to help me find open nodes to contribute to when I have only a
-small amount of Session to contribute. When you run the script it will ask you for the minimum and maximum you are looking
-to contribute. The script will then scan the service nodes every five minutes looking for ones that aren't yet active
-due to not having 15,000 Session contributed. If it finds a match, it will email you a notification containing all
-matching nodes.~~
+Open service node finder is no longer functional since the move to the new SESH token on Arbitrum One. The Node Finder script is deprecated and will be removed in a future release.
 
 Please use these scripts at your own risk. I provide no guarantees of accuracy or functionality.
 

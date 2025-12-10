@@ -1,10 +1,17 @@
 ## Changelog:
 
+### 0.3.0 - 2025-12-10:
+
+**Changed**
+
+- `README.md` - Update README to reflect the deprecation of the Node Finder script.
+- `requirements.txt` - Bump urllib3 from 2.5.0 to 2.6.0 [PR 28](https://github.com/crypto-ali/oxen-snode-monitor/pull/28)
+
 ### 0.2.9 - 2025-09-26:
 
 **Changed**
 
-- Update to reflect the rebranding from Oxen to Session.
+- Update to reflect the rebranding from Oxen to Session. [PR 27](https://github.com/crypto-ali/oxen-snode-monitor/pull/27)
 - `sample_node_list.py` - Update `remote_node_list` to remove no longer active remote nodes. 
 
 ### 0.2.8 - 2025-09-25:
