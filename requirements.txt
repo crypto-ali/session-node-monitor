@@ -8,7 +8,7 @@ idna==3.7
 lxml==4.9.1
 pip-upgrade-outdated==1.5
 premailer==3.10.0
-python-dotenv==0.20.0
+python-dotenv==1.2.2
 requests==2.32.4
 urllib3==2.6.3
 yagmail==0.15.280
