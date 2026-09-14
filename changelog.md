@@ -1,6 +1,17 @@
 <!-- markdownlint-disable MD024 -->
 # Changelog
 
+## 0.3.2 - 2026-09-14
+
+### Changed
+
+- `requirements.txt` - Bump `requests` from `2.32.4` to `2.33.0` - [PR 30](https://github.com/crypto-ali/oxen-snode-monitor/pull/30)
+- `requirements.txt` - Bump `lxml` from `4.9.1` to `6.1.3` - [PR 30](https://github.com/crypto-ali/oxen-snode-monitor/pull/30)
+- `requirements.txt` - Bump `yagmail` from `0.15.280` to `0.16.0` - [PR 30](https://github.com/crypto-ali/oxen-snode-monitor/pull/30)
+- `requirements.txt` - Add `legacy-cgi` version `2.6.4` - [PR 30](https://github.com/crypto-ali/oxen-snode-monitor/pull/30)
+- `requirements.txt` - Bump `python-dotenv` from `0.20.0` to `1.2.2` - [PR 31](https://github.com/crypto-ali/oxen-snode-monitor/pull/31)
+- `requirements.txt` - Bump `urllib3` from `2.6.3` to `2.7.0` - [PR 33](https://github.com/crypto-ali/oxen-snode-monitor/pull/33)
+
 ## 0.3.1 - 2026-01-08
 
 ### Changed

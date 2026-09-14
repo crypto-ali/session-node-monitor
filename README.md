@@ -1,5 +1,7 @@
 # Session Service Node Monitor and Email Alert Script
 
+This codebase requires Python 3.10 or higher. Python 3.14 is recommended.
+
 The service node [monitor script](monitor.py) is a simple script to easily monitor your Session Service Nodes. If your
 service node's last accepted uptime proof becomes older than 66 minutes, the script will email you an alert. The script
 is currently set to check your node's uptime proof age every five minutes.
@@ -10,42 +12,43 @@ Open service node finder is no longer functional since the move to the new SESH 
 
 Please use these scripts at your own risk. I provide no guarantees of accuracy or functionality.
 
+### To install and run
 
-### To install and run:
- - Clone repo
- - CD into repo dir
- - Create virtual environment and activate it. ex. `python -m venv venv`
- - Install required modules: `pip install -r requirements.txt`
- - Create ENV file from sample env file: `cp sample.env.txt .env`
- - Edit ENV file in your preferred text editor and save.
- - Test that you can send email alerts: `python yagmail-setup.py`
- - Create node_list file: `cp sample_node_list.py node_list.py`
-   - Note: `node_list.py` is included in the .gitignore file so you can safely add your SNode PubKey(s) without worry of pushing them to a repo.
- - Add your Session Snode PubKey(s) to the `snode_list` in your `node_list.py` file. You can also add or change the remote nodes in the `remote_node_list`. The remote nodes included in the sample file should work out of the box.   
- - Run script in detached screen: `python monitor.py`
+- Clone repo
+- CD into repo dir
+- Create virtual environment and activate it. ex. `python -m venv venv`
+- Install required modules: `pip install -r requirements.txt`
+- Create ENV file from sample env file: `cp sample.env.txt .env`
+- Edit ENV file in your preferred text editor and save.
+- Test that you can send email alerts: `python yagmail-setup.py`
+- Create node_list file: `cp sample_node_list.py node_list.py`
+  - Note: `node_list.py` is included in the .gitignore file so you can safely add your SNode PubKey(s) without worry of pushing them to a repo.
+- Add your Session Snode PubKey(s) to the `snode_list` in your `node_list.py` file. You can also add or change the remote nodes in the `remote_node_list`. The remote nodes included in the sample file should work out of the box.
+- Run script in detached screen: `python monitor.py`
 
 ### Run Node Finder
- - After completing the install steps above, start a screen, activate the virtual environment, and run: `python node_finder.py`.
- - Input the minimum amount you are looking to stake.
- - Input the maximum amount that you can stake.
- - Detach screen and let it run.
 
-### Run as a system service:
- - `cd /etc/systemd/system`
- - Create a new file with .service file extension and open it to edit. ex. `sudo vi snodemonit.service`
- - Paste the contents of the included sample-service-file.txt into the new file.
- - Update the ExecStart line to include the actual paths to your virtual environment Python and your monitor.py script.
-   - Example virtual environment path: `/home/$USER/Session-snode-monitor/venv/bin/python`
-   - Example path to monitor script: `/home/$USER/Session-snode-monitor/venv/monitor.py`
- - Save the file.
- - Run `sudo systemctl daemon-reload` to reload the systemd manager configuration.
- - To start the monitor service, run: `sudo systemctl start snodemonit.service` (This assumes you named your service file *snodemonit.service*)
- - To enable the monitor to start on system boot, run: `sudo systemctl enable snodemonit.service`
+- After completing the install steps above, start a screen, activate the virtual environment, and run: `python node_finder.py`.
+- Input the minimum amount you are looking to stake.
+- Input the maximum amount that you can stake.
+- Detach screen and let it run.
 
+### Run as a system service
 
-### Common systemctl commands:
+- `cd /etc/systemd/system`
+- Create a new file with .service file extension and open it to edit. ex. `sudo vi snodemonit.service`
+- Paste the contents of the included sample-service-file.txt into the new file.
+- Update the ExecStart line to include the actual paths to your virtual environment Python and your monitor.py script.
+  - Example virtual environment path: `/home/$USER/Session-snode-monitor/venv/bin/python`
+  - Example path to monitor script: `/home/$USER/Session-snode-monitor/venv/monitor.py`
+- Save the file.
+- Run `sudo systemctl daemon-reload` to reload the systemd manager configuration.
+- To start the monitor service, run: `sudo systemctl start snodemonit.service` (This assumes you named your service file *snodemonit.service*)
+- To enable the monitor to start on system boot, run: `sudo systemctl enable snodemonit.service`
 
-*All of the following commands assume you named your service file: snodemonit.service*
+### Common systemctl commands
+
+#### *Note: All of the following commands assume you named your service file: snodemonit.service*
 
 To check the status of the service, run:
 
@@ -63,7 +66,7 @@ To restart the service, run:
 
 `sudo systemctl restart snodemonit.service`
 
-To disable service autostart on system boot, run: 
+To disable service autostart on system boot, run:
 
 `sudo systemctl disable snodemonit.service`
 
@@ -75,28 +78,29 @@ Lastly, to review the logs of your service node monitor when running as a system
 
 `sudo journalctl --unit=snodemonit.service`
 
+## To Do
 
-## To Do:
- - [x] Rebrand to Session
- - [ ] Refactor code to be object oriented
- - [ ] Add tests
+- [x] Rebrand to Session
+- [ ] Refactor code to be object oriented
+- [ ] Add tests
 
-## Changelog:
+## Changelog
 
 The changelog has been moved to its own file: [changelog.md](changelog.md)
 
-## Bug reporting:
+## Bug reporting
 
 If you find a bug while using this script, please open an issue to report it.
 
-## Contributing:
+## Contributing
 
 If you'd like to contribute to this script:
+
  1. Fork the repo
  1. Open an issue and include info about what improvements you want to add
  1. Submit a PR
 
-### Tips:
+### Tips
 
 If you use and like this Session Service Node Monitor Script and want to send me a tip as gratitude, you can send tips here:
 
