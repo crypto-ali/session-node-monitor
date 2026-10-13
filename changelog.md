@@ -1,6 +1,12 @@
 <!-- markdownlint-disable MD024 -->
 # Changelog
 
+## 0.3.3 - 2026-10-13
+
+### Changed
+
+- `requirements.txt` - Bump urllib3 from 2.7.0 to 2.8.0- [PR 35](https://github.com/crypto-ali/oxen-snode-monitor/pull/35)
+
 ## 0.3.2 - 2026-09-14
 
 ### Changed
