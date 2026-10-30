@@ -1,6 +1,12 @@
 <!-- markdownlint-disable MD024 -->
 # Changelog
 
+## 0.3.4 - 2026-10-30
+
+### Changed
+
+- `requirements.txt` - Bump `certifi` from `2024.7.4` to `2026.10.26` - [PR 36](https://github.com/crypto-ali/oxen-snode-monitor/pull/36)
+
 ## 0.3.3 - 2026-10-13
 
 ### Changed
